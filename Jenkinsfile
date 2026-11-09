@@ -12,7 +12,7 @@ pipeline{
                     bat 'docker run mypython'
                 }
             }
-            POST{
+            post{
                 success{
                     echo"Registration Successful"
                 }
