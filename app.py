@@ -3,7 +3,7 @@ app=Flask(__name__)
 @app.route('/')
 def index():
     return render_template('registration.html')
-@app.route('/register' method=['POST'])
+@app.route('/register' methods=['POST'])
 def register():
     Name=request.form['Name']
     Student_Id=request.form['Student_Id']
