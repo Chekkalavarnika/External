@@ -5,10 +5,10 @@ def index():
     return render_template('registration.html')
 @app.route('/register', methods=['POST'])
 def register():
-    Name=request.form['Name']
-    Student_Id=request.form['Student_Id']
-    Email=request.form['Email']
-    Year=request.form['Year']
+    name=request.form['name']
+    student_id=request.form['student_id']
+    email=request.form['email']
+    year=request.form['year']
     return render_template(
         successful.html
         name=name
