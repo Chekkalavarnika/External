@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -10,8 +11,8 @@ pipeline {
 
         stage('Run') {
             steps {
-                bat 'docker rm mycontainer || exit 0'
-                bat 'docker run mypython'
+                bat 'docker rm -f mycontainer || exit 0'
+                bat 'docker run --name mycontainer mypython'
             }
         }
     }
@@ -20,10 +21,10 @@ pipeline {
         success {
             echo "Registration Successful"
         }
-
         failure {
             echo "Registration Failure"
         }
     }
 }
+
 
