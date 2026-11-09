@@ -11,7 +11,7 @@ def register():
     year=request.form['year']
     return render_template(
         successful.html
-        name=name
+        name=Name
         student_id=student_id
         email=email
         year=year
